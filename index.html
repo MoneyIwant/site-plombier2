@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depann'Pro - Plombier Professionnel | Interventions 24h/24</title>
+    <meta name="description" content="Depann'Pro - Votre plombier de confiance. Dépannage, installation et rénovation. Intervention rapide 24h/24, 7j/7. Devis gratuit.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-faucet-drip"></i>
+                <span>Depann'Pro</span>
+            </a>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#apropos">À Propos</a></li>
+                <li><a href="#temoignages">Témoignages</a></li>
+                <li><a href="#contact" class="btn-nav">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="accueil" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fa-solid fa-shield-check"></i>
+                    <span>Intervention rapide garantie</span>
+                </div>
+                <div class="focus-title">
+                    <span class="focus-word">Votre Plombier de Confiance</span>
+                    <span class="focus-frame">
+                        <span class="corner top-left"></span>
+                        <span class="corner top-right"></span>
+                        <span class="corner bottom-left"></span>
+                        <span class="corner bottom-right"></span>
+                    </span>
+                </div>
+                <h1 class="hero-subtitle">24h/24 & 7j/7</h1>
+                <p>Dépannage, installation et rénovation plumbing. Intervention sous 30 minutes pour vos urgences. Devis gratuit et transparent.</p>
+                <div class="hero-cta">
+                    <a href="tel:0612345678" class="btn btn-primary">
+                        <i class="fa-solid fa-phone"></i>
+                        06 12 34 56 78
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">Demander un devis gratuit</a>
+                </div>
+                <div class="hero-features">
+                    <div class="feature">
+                        <i class="fa-solid fa-check-circle"></i>
+                        <span>Déplacement gratuit</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa-solid fa-check-circle"></i>
+                        <span>Devis gratuit</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa-solid fa-check-circle"></i>
+                        <span>Garantie 10 ans</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nos Services</span>
+                <h2>Toutes Vos Interventions Plomberie</h2>
+                <p>Des solutions complètes pour tous vos besoins</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card featured">
+                    <div class="service-badge">Populaire</div>
+                    <div class="service-icon">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <h3>Dépannage d'Urgence</h3>
+                    <p>Intervention rapide pour tous vos problèmes de plomberie. Disponible 24h/24, 7j/7.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-check"></i> Sous 30 minutes</li>
+                        <li><i class="fa-solid fa-check"></i> Toutes urgences</li>
+                        <li><i class="fa-solid fa-check"></i> Prix transparent</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-faucet"></i>
+                    </div>
+                    <h3>Réparation de Fuites</h3>
+                    <p>Détection et réparation de fuites apparentes ou invisibles. Technologie de détection moderne.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-check"></i> Détection par caméra</li>
+                        <li><i class="fa-solid fa-check"></i> Réparation sans casse</li>
+                        <li><i class="fa-solid fa-check"></i> Garantie travaux</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-shower"></i>
+                    </div>
+                    <h3>Installation Sanitaire</h3>
+                    <p>Création ou rénovation de salle de bain. Installation de douches, baignoires, WC et accessoires.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-check"></i> Conseils personnalisés</li>
+                        <li><i class="fa-solid fa-check"></i> Grandes marques</li>
+                        <li><i class="fa-solid fa-check"></i> Finition impeccable</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-temperature-arrow-down"></i>
+                    </div>
+                    <h3>Chauffage & Chauffe-eau</h3>
+                    <p>Installation, réparation et entretien de chaudières et chauffe-eau. Toutes énergies.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-check"></i> Toutes marques</li>
+                        <li><i class="fa-solid fa-check"></i> Économies d'énergie</li>
+                        <li><i class="fa-solid fa-check"></i> Contrat d'entretien</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-screwdriver-wrench" style="color: var(--primary);"></i>
+                    </div>
+                    <h3>Débouchage Canalisation 🪠</h3>
+                    <p>WC, évier, douche ou canalisation principale. Débouchage professionnel par méthode adaptée.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-check"></i> Hydrocurage haute pression</li>
+                        <li><i class="fa-solid fa-check"></i> Résultat immédiat</li>
+                        <li><i class="fa-solid fa-check"></i> Prévention incluse</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-house"></i>
+                    </div>
+                    <h3>Rénovation Complète</h3>
+                    <p>Rénovation totale de votre plomberie. Travaux de gros œuvre et second œuvre pour votre habitat.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-check"></i> Plan 3D gratuit</li>
+                        <li><i class="fa-solid fa-check"></i> Gestion de projet</li>
+                        <li><i class="fa-solid fa-check"></i> Garantie décennale</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <i class="fa-solid fa-toolbox"></i>
+                    <div class="stat-number" data-count="450">0</div>
+                    <div class="stat-suffix">+</div>
+                    <div class="stat-label">Interventions</div>
+                </div>
+                <div class="stat-item">
+                    <i class="fa-solid fa-face-smile"></i>
+                    <div class="stat-number" data-count="100">0</div>
+                    <div class="stat-suffix">%</div>
+                    <div class="stat-label">Clients satisfaits</div>
+                </div>
+                <div class="stat-item">
+                    <i class="fa-solid fa-award"></i>
+                    <div class="stat-number" data-count="8">0</div>
+                    <div class="stat-suffix">+</div>
+                    <div class="stat-label">Années d'expérience</div>
+                </div>
+                <div class="stat-item">
+                    <i class="fa-solid fa-bolt"></i>
+                    <div class="stat-number" data-count="30">0</div>
+                    <div class="stat-suffix">min</div>
+                    <div class="stat-label">Rapidité</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="apropos" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&h=700&fit=crop" alt="Plombier professionnel au travail">
+                    <div class="about-badge">
+                        <i class="fa-solid fa-certificate"></i>
+                        <span>Certifié RGE</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-tag">À Propos</span>
+                    <h2>Votre Expert Plombier depuis Plus de 10 Ans</h2>
+                    <p>Chez Depann'Pro, nous mettons notre expertise au service de votre confort. Fondée en 2015, notre entreprise familiale s'est construite sur une réputation d'excellence et de fiabilité.</p>
+                    <p>Notre équipe de plombiers qualifiés intervient rapidement chez vous avec tout le matériel nécessaire pour résoudre votre problème efficacement.</p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <div>
+                                <h4>Garantie Décennale</h4>
+                                <p>Tous nos travaux sont garantis 10 ans</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <div>
+                                <h4>Devis Détaillé</h4>
+                                <p>Prix transparent sans surprise</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <div>
+                                <h4>Assistance 24h/24</h4>
+                                <p>Un plombier disponible même la nuit</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary">Contactez-nous</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="zone-intervention">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Zone d'Intervention</span>
+                <h2>Nous intervenons dans le Vaucluse</h2>
+                <p>Notre équipe est disponible pour tous vos dépannages</p>
+            </div>
+            <div class="map-wrapper">
+                <div id="map"></div>
+            </div>
+            <div class="cities-list">
+                <div class="city-badge"><i class="fa-solid fa-city"></i> Avignon</div>
+                <div class="city-badge"><i class="fa-solid fa-city"></i> Cavaillon</div>
+                <div class="city-badge"><i class="fa-solid fa-city"></i> Orange</div>
+                <div class="city-badge"><i class="fa-solid fa-city"></i> Apt</div>
+                <div class="city-badge"><i class="fa-solid fa-city"></i> Carpentras</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="temoignages" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fa-brands fa-google"></i> Google Reviews</span>
+                <h2>Avis Google de Nos Clients</h2>
+                <p>La satisfaction de nos clients est notre priorité</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="google-badge">
+                        <i class="fa-brands fa-google"></i>
+                        <span>Google</span>
+                    </div>
+                    <div class="testimonial-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Intervention très rapide pour une fuite importante. Le plombier est arrivé en 20 minutes et a tout réparé parfaitement. Prix très correct pour la qualité du travail."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">ML</div>
+                        <div class="author-info">
+                            <h4>Marie Lefebvre</h4>
+                            <span>Propriétaire, Vaucluse</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="google-badge">
+                        <i class="fa-brands fa-google"></i>
+                        <span>Google</span>
+                    </div>
+                    <div class="testimonial-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Rénovation complète de notre salle de bain. Travail impeccable, propre et dans les délais. Je recommande vivement Depann'Pro pour tous travaux de plomberie."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">PD</div>
+                        <div class="author-info">
+                            <h4>Pierre Durand</h4>
+                            <span>Manager, Vaucluse</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="google-badge">
+                        <i class="fa-brands fa-google"></i>
+                        <span>Google</span>
+                    </div>
+                    <div class="testimonial-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Mon chauffe-eau était en panne un dimanche. Depann'Pro a répondu instantanément et a résolu le problème le jour même. Service exceptionnel!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SB</div>
+                        <div class="author-info">
+                            <h4>Sophie Bernard</h4>
+                            <span>Commerçante, Vaucluse</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Une Urgence? Nous Sommes Là!</h2>
+                <p>Appelez-nous maintenant pour une intervention rapide. Déplacement gratuit et devis transparent.</p>
+                <div class="cta-buttons">
+                    <a href="tel:0612345678" class="btn btn-white">
+                        <i class="fa-solid fa-phone"></i>
+                        06 12 34 56 78
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-tag">Contact</span>
+                    <h2>Parlons de Votre Projet</h2>
+                    <p>Décrivez-nous votre problème ou votre projet. Nous vous répondons rapidement avec une solution adaptée.</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>Téléphone</h4>
+                                <a href="tel:0612345678">06 12 34 56 78</a>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:contact@depanpro.fr">contact@depanpro.fr</a>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4>Zone d'intervention</h4>
+                                <span>Vaucluse</span>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4>Horaires</h4>
+                                <span>24h/24 - 7j/7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Nom complet *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Téléphone *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Type de service *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Sélectionnez un service</option>
+                                <option value="depannage">Dépannage d'urgence</option>
+                                <option value="fuite">Réparation de fuite</option>
+                                <option value="installation">Installation sanitaire</option>
+                                <option value="chauffage">Chauffage / Chauffe-eau</option>
+                                <option value="debouchage">Débouchage canalisation</option>
+                                <option value="renovation">Rénovation complète</option>
+                                <option value="autre">Autre demande</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Décrivez votre problème *</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Décrivez votre problème ou votre projet..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Envoyer ma demande
+                        </button>
+                        <p class="form-note"><i class="fa-solid fa-lock"></i> Vos données sont protégées. Réponse sous 2h max.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <i class="fa-solid fa-faucet-drip"></i>
+                        <span>Depann'Pro</span>
+                    </a>
+                    <p>Votre plombier de confiance dans le Vaucluse. Intervention rapide, travail de qualité, prix transparent.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Dépannage urgence</a></li>
+                        <li><a href="#services">Réparation fuite</a></li>
+                        <li><a href="#services">Installation sanitaire</a></li>
+                        <li><a href="#services">Chauffage</a></li>
+                        <li><a href="#services">Rénovation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Informations</h4>
+                    <ul>
+                        <li><a href="#apropos">À propos</a></li>
+                        <li><a href="#temoignages">Témoignages</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Rapide</h4>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:0612345678">06 12 34 56 78</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:contact@depanpro.fr">contact@depanpro.fr</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Vaucluse</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Depann'Pro. Tous droits réservés.</p>
+                <div class="footer-badges">
+                    <span><i class="fa-solid fa-shield-halved"></i> Garantie décennale</span>
+                    <span><i class="fa-solid fa-certificate"></i> Certifié RGE</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const map = L.map('map').setView([44.0, 5.1], 8);
+            
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap'
+            }).addTo(map);
+
+            const vaucluseCoords = [
+                [43.95, 5.05], [43.98, 5.15], [44.02, 5.22], [44.08, 5.30],
+                [44.12, 5.38], [44.15, 5.50], [44.12, 5.60], [44.05, 5.68],
+                [43.98, 5.72], [43.90, 5.75], [43.82, 5.70], [43.75, 5.60],
+                [43.72, 5.48], [43.75, 5.35], [43.80, 5.22], [43.85, 5.12],
+                [43.90, 5.05]
+            ];
+
+            L.polygon(vaucluseCoords, {
+                color: '#7cb342',
+                fillColor: '#7cb342',
+                fillOpacity: 0.15,
+                weight: 0
+            }).addTo(map);
+
+            const cities = [
+                { name: 'Avignon', lat: 43.9493, lng: 4.8055 },
+                { name: 'Cavaillon', lat: 43.8342, lng: 5.0382 },
+                { name: 'Orange', lat: 44.1369, lng: 4.8090 },
+                { name: 'Apt', lat: 43.8774, lng: 5.3968 },
+                { name: 'Carpentras', lat: 44.0557, lng: 5.0482 }
+            ];
+
+            cities.forEach(city => {
+                L.marker([city.lat, city.lng])
+                    .addTo(map)
+                    .bindPopup(city.name);
+            });
+
+            const customIcon = L.divIcon({
+                className: 'custom-marker',
+                html: '<div class="marker-inner"><i class="fa-solid fa-faucet-drip"></i></div>',
+                iconSize: [40, 40],
+                iconAnchor: [20, 40]
+            });
+
+            L.marker([44.0, 5.1], { icon: customIcon })
+                .addTo(map)
+                .bindPopup('<strong>Depann\'Pro</strong><br>Vaucluse')
+                .openPopup();
+        });
+    </script>
+</body>
+</html>
