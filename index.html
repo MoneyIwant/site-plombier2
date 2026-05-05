@@ -1,554 +1,606 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Depann'Pro - Plombier Professionnel | Interventions 24h/24</title>
-    <meta name="description" content="Depann'Pro - Votre plombier de confiance. Dépannage, installation et rénovation. Intervention rapide 24h/24, 7j/7. Devis gratuit.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ProPeint - Entreprise de peinture professionnelle à Marseille. Peinture intérieure, extérieure, ravalement de façade, décoration. Devis gratuit." />
+  <title>ProPeint - Peintre Professionnel à Marseille</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">
-                <i class="fa-solid fa-faucet-drip"></i>
-                <span>Depann'Pro</span>
-            </a>
-            <button class="mobile-menu-btn" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-links">
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#apropos">À Propos</a></li>
-                <li><a href="#temoignages">Témoignages</a></li>
-                <li><a href="#contact" class="btn-nav">Contact</a></li>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#accueil" class="nav-logo">
+        <span class="logo-icon">🎨</span>
+        <span class="logo-text">Pro<strong>Peint</strong></span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#accueil" class="nav-link">Accueil</a></li>
+        <li><a href="#apropos" class="nav-link">À propos</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#realisations" class="nav-link">Réalisations</a></li>
+        <li><a href="#avis" class="nav-link">Avis</a></li>
+        <li><a href="#contact" class="nav-link nav-cta">Devis Gratuit</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="accueil">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-badge">🏆 Artisan certifié RGE à Marseille</span>
+      <h1>Votre Peintre Professionnel<br /><span class="hero-accent">à Marseille</span></h1>
+      <p class="hero-subtitle">Intérieur, extérieur, ravalement de façade — ProPeint transforme vos espaces avec soin, qualité et précision depuis plus de 15 ans.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary">Demander un devis gratuit</a>
+        <a href="#realisations" class="btn btn-outline">Voir nos réalisations</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">500+</span>
+          <span class="stat-label">Chantiers réalisés</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">15</span>
+          <span class="stat-label">Années d'expérience</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">4.9★</span>
+          <span class="stat-label">Note moyenne</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Découvrir</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- BANDEAU DE CONFIANCE -->
+  <section class="trust-bar">
+    <div class="container">
+      <div class="trust-items">
+        <div class="trust-item"><span class="trust-icon">✅</span><span>Artisan certifié</span></div>
+        <div class="trust-item"><span class="trust-icon">🛡️</span><span>Assurance décennale</span></div>
+        <div class="trust-item"><span class="trust-icon">💬</span><span>Devis sous 24h</span></div>
+        <div class="trust-item"><span class="trust-icon">🎨</span><span>Matériaux premium</span></div>
+        <div class="trust-item"><span class="trust-icon">📍</span><span>Marseille &amp; alentours</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- À PROPOS -->
+  <section class="about" id="apropos">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-images">
+          <div class="about-img-main">
+            <img src="https://images.unsplash.com/photo-1562259929-b4e1fd3aef09?w=600&q=80" alt="Équipe ProPeint au travail" loading="lazy" />
+          </div>
+          <div class="about-img-secondary">
+            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&q=80" alt="Travail de peinture professionnel" loading="lazy" />
+          </div>
+          <div class="about-badge-float">
+            <span class="badge-number">15</span>
+            <span class="badge-text">ans d'expérience</span>
+          </div>
+        </div>
+        <div class="about-content">
+          <span class="section-label">Qui sommes-nous ?</span>
+          <h2 class="section-title">ProPeint, l'artisan peintre de confiance à Marseille</h2>
+          <p>Fondée en 2009, ProPeint est une entreprise familiale marseillaise spécialisée dans les travaux de peinture pour les particuliers et les professionnels. Notre équipe de peintres qualifiés intervient sur toute la région PACA.</p>
+          <p>Nous mettons un point d'honneur à fournir un travail soigné, des délais respectés et des finitions impeccables. Chaque chantier est unique, et nous adaptons notre approche à vos besoins et votre budget.</p>
+          <ul class="about-features">
+            <li>
+              <span class="feature-icon">✓</span>
+              <div><strong>Artisan certifié Qualibat</strong><p>Gage de qualité et de sérieux reconnu nationalement</p></div>
+            </li>
+            <li>
+              <span class="feature-icon">✓</span>
+              <div><strong>Assurance décennale complète</strong><p>Vos travaux sont garantis et protégés pendant 10 ans</p></div>
+            </li>
+            <li>
+              <span class="feature-icon">✓</span>
+              <div><strong>Produits éco-responsables</strong><p>Peintures basse émission, respectueuses de l'environnement</p></div>
+            </li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Nous contacter</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Ce que nous faisons</span>
+        <h2 class="section-title">Nos Services de Peinture</h2>
+        <p class="section-desc">De la préparation des surfaces à la finition parfaite, nous prenons en charge tous vos projets de peinture avec professionnalisme.</p>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-img">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80" alt="Peinture intérieure" loading="lazy" />
+            <div class="service-overlay"><a href="#contact" class="btn btn-sm">Demander un devis</a></div>
+          </div>
+          <div class="service-body">
+            <div class="service-icon">🏠</div>
+            <h3>Peinture Intérieure</h3>
+            <p>Murs, plafonds, boiseries, plinthes — nous rénovons et embellissons tous vos espaces intérieurs avec soin et précision.</p>
+            <ul class="service-list">
+              <li>Préparation et rebouchage</li>
+              <li>Enduit lissé et ponçage</li>
+              <li>Application multicouches</li>
+              <li>Finitions soignées</li>
             </ul>
+          </div>
         </div>
-    </nav>
 
-    <header id="accueil" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <i class="fa-solid fa-shield-check"></i>
-                    <span>Intervention rapide garantie</span>
-                </div>
-                <div class="focus-title">
-                    <span class="focus-word">Votre Plombier de Confiance</span>
-                    <span class="focus-frame">
-                        <span class="corner top-left"></span>
-                        <span class="corner top-right"></span>
-                        <span class="corner bottom-left"></span>
-                        <span class="corner bottom-right"></span>
-                    </span>
-                </div>
-                <h1 class="hero-subtitle">24h/24 & 7j/7</h1>
-                <p>Dépannage, installation et rénovation plumbing. Intervention sous 30 minutes pour vos urgences. Devis gratuit et transparent.</p>
-                <div class="hero-cta">
-                    <a href="tel:0612345678" class="btn btn-primary">
-                        <i class="fa-solid fa-phone"></i>
-                        06 12 34 56 78
-                    </a>
-                    <a href="#contact" class="btn btn-secondary">Demander un devis gratuit</a>
-                </div>
-                <div class="hero-features">
-                    <div class="feature">
-                        <i class="fa-solid fa-check-circle"></i>
-                        <span>Déplacement gratuit</span>
-                    </div>
-                    <div class="feature">
-                        <i class="fa-solid fa-check-circle"></i>
-                        <span>Devis gratuit</span>
-                    </div>
-                    <div class="feature">
-                        <i class="fa-solid fa-check-circle"></i>
-                        <span>Garantie 10 ans</span>
-                    </div>
-                </div>
-            </div>
+        <div class="service-card service-card--featured">
+          <div class="service-badge">Le plus demandé</div>
+          <div class="service-img">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=500&q=80" alt="Ravalement de façade" loading="lazy" />
+            <div class="service-overlay"><a href="#contact" class="btn btn-sm">Demander un devis</a></div>
+          </div>
+          <div class="service-body">
+            <div class="service-icon">🏗️</div>
+            <h3>Ravalement de Façade</h3>
+            <p>Redonnez à votre façade son éclat d'origine. Protection contre les intempéries et amélioration de l'isolation thermique.</p>
+            <ul class="service-list">
+              <li>Nettoyage haute pression</li>
+              <li>Traitement des fissures</li>
+              <li>Enduit de façade</li>
+              <li>Peinture de protection</li>
+            </ul>
+          </div>
         </div>
-    </header>
 
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Nos Services</span>
-                <h2>Toutes Vos Interventions Plomberie</h2>
-                <p>Des solutions complètes pour tous vos besoins</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card featured">
-                    <div class="service-badge">Populaire</div>
-                    <div class="service-icon">
-                        <i class="fa-solid fa-screwdriver-wrench"></i>
-                    </div>
-                    <h3>Dépannage d'Urgence</h3>
-                    <p>Intervention rapide pour tous vos problèmes de plomberie. Disponible 24h/24, 7j/7.</p>
-                    <ul class="service-list">
-                        <li><i class="fa-solid fa-check"></i> Sous 30 minutes</li>
-                        <li><i class="fa-solid fa-check"></i> Toutes urgences</li>
-                        <li><i class="fa-solid fa-check"></i> Prix transparent</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-faucet"></i>
-                    </div>
-                    <h3>Réparation de Fuites</h3>
-                    <p>Détection et réparation de fuites apparentes ou invisibles. Technologie de détection moderne.</p>
-                    <ul class="service-list">
-                        <li><i class="fa-solid fa-check"></i> Détection par caméra</li>
-                        <li><i class="fa-solid fa-check"></i> Réparation sans casse</li>
-                        <li><i class="fa-solid fa-check"></i> Garantie travaux</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-shower"></i>
-                    </div>
-                    <h3>Installation Sanitaire</h3>
-                    <p>Création ou rénovation de salle de bain. Installation de douches, baignoires, WC et accessoires.</p>
-                    <ul class="service-list">
-                        <li><i class="fa-solid fa-check"></i> Conseils personnalisés</li>
-                        <li><i class="fa-solid fa-check"></i> Grandes marques</li>
-                        <li><i class="fa-solid fa-check"></i> Finition impeccable</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-temperature-arrow-down"></i>
-                    </div>
-                    <h3>Chauffage & Chauffe-eau</h3>
-                    <p>Installation, réparation et entretien de chaudières et chauffe-eau. Toutes énergies.</p>
-                    <ul class="service-list">
-                        <li><i class="fa-solid fa-check"></i> Toutes marques</li>
-                        <li><i class="fa-solid fa-check"></i> Économies d'énergie</li>
-                        <li><i class="fa-solid fa-check"></i> Contrat d'entretien</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-screwdriver-wrench" style="color: var(--primary);"></i>
-                    </div>
-                    <h3>Débouchage Canalisation 🪠</h3>
-                    <p>WC, évier, douche ou canalisation principale. Débouchage professionnel par méthode adaptée.</p>
-                    <ul class="service-list">
-                        <li><i class="fa-solid fa-check"></i> Hydrocurage haute pression</li>
-                        <li><i class="fa-solid fa-check"></i> Résultat immédiat</li>
-                        <li><i class="fa-solid fa-check"></i> Prévention incluse</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-house"></i>
-                    </div>
-                    <h3>Rénovation Complète</h3>
-                    <p>Rénovation totale de votre plomberie. Travaux de gros œuvre et second œuvre pour votre habitat.</p>
-                    <ul class="service-list">
-                        <li><i class="fa-solid fa-check"></i> Plan 3D gratuit</li>
-                        <li><i class="fa-solid fa-check"></i> Gestion de projet</li>
-                        <li><i class="fa-solid fa-check"></i> Garantie décennale</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="service-card">
+          <div class="service-img">
+            <img src="https://images.unsplash.com/photo-1560185007-c5ca9d2c014d?w=500&q=80" alt="Peinture extérieure" loading="lazy" />
+            <div class="service-overlay"><a href="#contact" class="btn btn-sm">Demander un devis</a></div>
+          </div>
+          <div class="service-body">
+            <div class="service-icon">☀️</div>
+            <h3>Peinture Extérieure</h3>
+            <p>Volets, portails, pergolas, mobilier de jardin — nous protégeons et valorisons tous vos éléments extérieurs.</p>
+            <ul class="service-list">
+              <li>Décapage et préparation</li>
+              <li>Primaire d'accrochage</li>
+              <li>Peinture anti-UV</li>
+              <li>Traitement antirouille</li>
+            </ul>
+          </div>
         </div>
-    </section>
 
-    <section class="stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <i class="fa-solid fa-toolbox"></i>
-                    <div class="stat-number" data-count="450">0</div>
-                    <div class="stat-suffix">+</div>
-                    <div class="stat-label">Interventions</div>
-                </div>
-                <div class="stat-item">
-                    <i class="fa-solid fa-face-smile"></i>
-                    <div class="stat-number" data-count="100">0</div>
-                    <div class="stat-suffix">%</div>
-                    <div class="stat-label">Clients satisfaits</div>
-                </div>
-                <div class="stat-item">
-                    <i class="fa-solid fa-award"></i>
-                    <div class="stat-number" data-count="8">0</div>
-                    <div class="stat-suffix">+</div>
-                    <div class="stat-label">Années d'expérience</div>
-                </div>
-                <div class="stat-item">
-                    <i class="fa-solid fa-bolt"></i>
-                    <div class="stat-number" data-count="30">0</div>
-                    <div class="stat-suffix">min</div>
-                    <div class="stat-label">Rapidité</div>
-                </div>
-            </div>
+        <div class="service-card">
+          <div class="service-img">
+            <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=500&q=80" alt="Décoration et effets spéciaux" loading="lazy" />
+            <div class="service-overlay"><a href="#contact" class="btn btn-sm">Demander un devis</a></div>
+          </div>
+          <div class="service-body">
+            <div class="service-icon">✨</div>
+            <h3>Décoration &amp; Effets Spéciaux</h3>
+            <p>Stucco, béton ciré, tadelakt, patine — apportez une touche unique et originale à vos intérieurs.</p>
+            <ul class="service-list">
+              <li>Béton ciré</li>
+              <li>Stucco vénitien</li>
+              <li>Effets matières</li>
+              <li>Conseils couleurs</li>
+            </ul>
+          </div>
         </div>
-    </section>
 
-    <section id="apropos" class="about">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&h=700&fit=crop" alt="Plombier professionnel au travail">
-                    <div class="about-badge">
-                        <i class="fa-solid fa-certificate"></i>
-                        <span>Certifié RGE</span>
-                    </div>
-                </div>
-                <div class="about-content">
-                    <span class="section-tag">À Propos</span>
-                    <h2>Votre Expert Plombier depuis Plus de 10 Ans</h2>
-                    <p>Chez Depann'Pro, nous mettons notre expertise au service de votre confort. Fondée en 2015, notre entreprise familiale s'est construite sur une réputation d'excellence et de fiabilité.</p>
-                    <p>Notre équipe de plombiers qualifiés intervient rapidement chez vous avec tout le matériel nécessaire pour résoudre votre problème efficacement.</p>
-                    <div class="about-features">
-                        <div class="about-feature">
-                            <i class="fa-solid fa-circle-check"></i>
-                            <div>
-                                <h4>Garantie Décennale</h4>
-                                <p>Tous nos travaux sont garantis 10 ans</p>
-                            </div>
-                        </div>
-                        <div class="about-feature">
-                            <i class="fa-solid fa-circle-check"></i>
-                            <div>
-                                <h4>Devis Détaillé</h4>
-                                <p>Prix transparent sans surprise</p>
-                            </div>
-                        </div>
-                        <div class="about-feature">
-                            <i class="fa-solid fa-circle-check"></i>
-                            <div>
-                                <h4>Assistance 24h/24</h4>
-                                <p>Un plombier disponible même la nuit</p>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#contact" class="btn btn-primary">Contactez-nous</a>
-                </div>
-            </div>
+        <div class="service-card">
+          <div class="service-img">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=500&q=80" alt="Peinture locaux professionnels" loading="lazy" />
+            <div class="service-overlay"><a href="#contact" class="btn btn-sm">Demander un devis</a></div>
+          </div>
+          <div class="service-body">
+            <div class="service-icon">🏢</div>
+            <h3>Locaux Professionnels</h3>
+            <p>Bureaux, commerces, restaurants, hôtels — nous intervenons en dehors des heures d'ouverture pour ne pas perturber votre activité.</p>
+            <ul class="service-list">
+              <li>Intervention week-end</li>
+              <li>Travail en urgence</li>
+              <li>Devis sur mesure</li>
+              <li>Facturation pro</li>
+            </ul>
+          </div>
         </div>
-    </section>
 
-    <section class="zone-intervention">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Zone d'Intervention</span>
-                <h2>Nous intervenons dans le Vaucluse</h2>
-                <p>Notre équipe est disponible pour tous vos dépannages</p>
-            </div>
-            <div class="map-wrapper">
-                <div id="map"></div>
-            </div>
-            <div class="cities-list">
-                <div class="city-badge"><i class="fa-solid fa-city"></i> Avignon</div>
-                <div class="city-badge"><i class="fa-solid fa-city"></i> Cavaillon</div>
-                <div class="city-badge"><i class="fa-solid fa-city"></i> Orange</div>
-                <div class="city-badge"><i class="fa-solid fa-city"></i> Apt</div>
-                <div class="city-badge"><i class="fa-solid fa-city"></i> Carpentras</div>
-            </div>
+        <div class="service-card">
+          <div class="service-img">
+            <img src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c?w=500&q=80" alt="Rénovation complète" loading="lazy" />
+            <div class="service-overlay"><a href="#contact" class="btn btn-sm">Demander un devis</a></div>
+          </div>
+          <div class="service-body">
+            <div class="service-icon">🔨</div>
+            <h3>Rénovation Complète</h3>
+            <p>Nous coordonnons l'ensemble de vos travaux de rénovation, du sol au plafond, pour une remise à neuf totale de vos espaces.</p>
+            <ul class="service-list">
+              <li>Pose de revêtements</li>
+              <li>Petite plomberie</li>
+              <li>Isolation intérieure</li>
+              <li>Coordination travaux</li>
+            </ul>
+          </div>
         </div>
-    </section>
 
-    <section id="temoignages" class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag"><i class="fa-brands fa-google"></i> Google Reviews</span>
-                <h2>Avis Google de Nos Clients</h2>
-                <p>La satisfaction de nos clients est notre priorité</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="google-badge">
-                        <i class="fa-brands fa-google"></i>
-                        <span>Google</span>
-                    </div>
-                    <div class="testimonial-stars">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"Intervention très rapide pour une fuite importante. Le plombier est arrivé en 20 minutes et a tout réparé parfaitement. Prix très correct pour la qualité du travail."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">ML</div>
-                        <div class="author-info">
-                            <h4>Marie Lefebvre</h4>
-                            <span>Propriétaire, Vaucluse</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="google-badge">
-                        <i class="fa-brands fa-google"></i>
-                        <span>Google</span>
-                    </div>
-                    <div class="testimonial-stars">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"Rénovation complète de notre salle de bain. Travail impeccable, propre et dans les délais. Je recommande vivement Depann'Pro pour tous travaux de plomberie."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">PD</div>
-                        <div class="author-info">
-                            <h4>Pierre Durand</h4>
-                            <span>Manager, Vaucluse</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="google-badge">
-                        <i class="fa-brands fa-google"></i>
-                        <span>Google</span>
-                    </div>
-                    <div class="testimonial-stars">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"Mon chauffe-eau était en panne un dimanche. Depann'Pro a répondu instantanément et a résolu le problème le jour même. Service exceptionnel!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">SB</div>
-                        <div class="author-info">
-                            <h4>Sophie Bernard</h4>
-                            <span>Commerçante, Vaucluse</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RÉALISATIONS -->
+  <section class="gallery" id="realisations">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Notre portfolio</span>
+        <h2 class="section-title">Nos Dernières Réalisations</h2>
+        <p class="section-desc">Découvrez quelques-uns de nos chantiers récents réalisés à Marseille et dans la région PACA.</p>
+      </div>
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="interieur">Intérieur</button>
+        <button class="filter-btn" data-filter="exterieur">Extérieur</button>
+        <button class="filter-btn" data-filter="facade">Façade</button>
+        <button class="filter-btn" data-filter="deco">Décoration</button>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item" data-category="interieur">
+          <img src="https://images.unsplash.com/photo-1562259929-b4e1fd3aef09?w=600&q=80" alt="Salon rénovation peinture Marseille" loading="lazy" />
+          <div class="gallery-overlay"><h4>Rénovation salon</h4><p>13e arrondissement, Marseille</p></div>
         </div>
-    </section>
-
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Une Urgence? Nous Sommes Là!</h2>
-                <p>Appelez-nous maintenant pour une intervention rapide. Déplacement gratuit et devis transparent.</p>
-                <div class="cta-buttons">
-                    <a href="tel:0612345678" class="btn btn-white">
-                        <i class="fa-solid fa-phone"></i>
-                        06 12 34 56 78
-                    </a>
-                </div>
-            </div>
+        <div class="gallery-item" data-category="facade">
+          <img src="https://images.unsplash.com/photo-1582063289852-62e3ba2747f8?w=600&q=80" alt="Ravalement façade Marseille" loading="lazy" />
+          <div class="gallery-overlay"><h4>Ravalement de façade</h4><p>Quartier du Panier, Marseille</p></div>
         </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <span class="section-tag">Contact</span>
-                    <h2>Parlons de Votre Projet</h2>
-                    <p>Décrivez-nous votre problème ou votre projet. Nous vous répondons rapidement avec une solution adaptée.</p>
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <div class="method-icon">
-                                <i class="fa-solid fa-phone"></i>
-                            </div>
-                            <div>
-                                <h4>Téléphone</h4>
-                                <a href="tel:0612345678">06 12 34 56 78</a>
-                            </div>
-                        </div>
-                        <div class="contact-method">
-                            <div class="method-icon">
-                                <i class="fa-solid fa-envelope"></i>
-                            </div>
-                            <div>
-                                <h4>Email</h4>
-                                <a href="mailto:contact@depanpro.fr">contact@depanpro.fr</a>
-                            </div>
-                        </div>
-                        <div class="contact-method">
-                            <div class="method-icon">
-                                <i class="fa-solid fa-location-dot"></i>
-                            </div>
-                            <div>
-                                <h4>Zone d'intervention</h4>
-                                <span>Vaucluse</span>
-                            </div>
-                        </div>
-                        <div class="contact-method">
-                            <div class="method-icon">
-                                <i class="fa-solid fa-clock"></i>
-                            </div>
-                            <div>
-                                <h4>Horaires</h4>
-                                <span>24h/24 - 7j/7</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Nom complet *</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Téléphone *</label>
-                                <input type="tel" id="phone" name="phone" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email">
-                        </div>
-                        <div class="form-group">
-                            <label for="service">Type de service *</label>
-                            <select id="service" name="service" required>
-                                <option value="">Sélectionnez un service</option>
-                                <option value="depannage">Dépannage d'urgence</option>
-                                <option value="fuite">Réparation de fuite</option>
-                                <option value="installation">Installation sanitaire</option>
-                                <option value="chauffage">Chauffage / Chauffe-eau</option>
-                                <option value="debouchage">Débouchage canalisation</option>
-                                <option value="renovation">Rénovation complète</option>
-                                <option value="autre">Autre demande</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Décrivez votre problème *</label>
-                            <textarea id="message" name="message" rows="4" placeholder="Décrivez votre problème ou votre projet..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full">
-                            <i class="fa-solid fa-paper-plane"></i>
-                            Envoyer ma demande
-                        </button>
-                        <p class="form-note"><i class="fa-solid fa-lock"></i> Vos données sont protégées. Réponse sous 2h max.</p>
-                    </form>
-                </div>
-            </div>
+        <div class="gallery-item" data-category="deco">
+          <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80" alt="Décoration intérieure béton ciré" loading="lazy" />
+          <div class="gallery-overlay"><h4>Béton ciré cuisine</h4><p>Aix-en-Provence</p></div>
         </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="#" class="logo">
-                        <i class="fa-solid fa-faucet-drip"></i>
-                        <span>Depann'Pro</span>
-                    </a>
-                    <p>Votre plombier de confiance dans le Vaucluse. Intervention rapide, travail de qualité, prix transparent.</p>
-                    <div class="footer-social">
-                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="#services">Dépannage urgence</a></li>
-                        <li><a href="#services">Réparation fuite</a></li>
-                        <li><a href="#services">Installation sanitaire</a></li>
-                        <li><a href="#services">Chauffage</a></li>
-                        <li><a href="#services">Rénovation</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Informations</h4>
-                    <ul>
-                        <li><a href="#apropos">À propos</a></li>
-                        <li><a href="#temoignages">Témoignages</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="#">Mentions légales</a></li>
-                        <li><a href="#">Politique de confidentialité</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact Rapide</h4>
-                    <div class="footer-contact-item">
-                        <i class="fa-solid fa-phone"></i>
-                        <a href="tel:0612345678">06 12 34 56 78</a>
-                    </div>
-                    <div class="footer-contact-item">
-                        <i class="fa-solid fa-envelope"></i>
-                        <a href="mailto:contact@depanpro.fr">contact@depanpro.fr</a>
-                    </div>
-                    <div class="footer-contact-item">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <span>Vaucluse</span>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2026 Depann'Pro. Tous droits réservés.</p>
-                <div class="footer-badges">
-                    <span><i class="fa-solid fa-shield-halved"></i> Garantie décennale</span>
-                    <span><i class="fa-solid fa-certificate"></i> Certifié RGE</span>
-                </div>
-            </div>
+        <div class="gallery-item" data-category="exterieur">
+          <img src="https://images.unsplash.com/photo-1560185127-6a086578388c?w=600&q=80" alt="Peinture volets extérieur" loading="lazy" />
+          <div class="gallery-overlay"><h4>Volets et façade</h4><p>La Valentine, Marseille</p></div>
         </div>
-    </footer>
+        <div class="gallery-item" data-category="interieur">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80" alt="Chambre rénovation peinture" loading="lazy" />
+          <div class="gallery-overlay"><h4>Rénovation chambre</h4><p>Aubagne</p></div>
+        </div>
+        <div class="gallery-item" data-category="facade">
+          <img src="https://images.unsplash.com/photo-1523413307857-ef24c31674cc?w=600&q=80" alt="Ravalement immeuble copropriété" loading="lazy" />
+          <div class="gallery-overlay"><h4>Immeuble en copropriété</h4><p>Castellane, Marseille</p></div>
+        </div>
+        <div class="gallery-item" data-category="deco">
+          <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=600&q=80" alt="Stucco vénitien mur" loading="lazy" />
+          <div class="gallery-overlay"><h4>Stucco vénitien</h4><p>Cassis</p></div>
+        </div>
+        <div class="gallery-item" data-category="interieur">
+          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Cuisine peinture professionnelle" loading="lazy" />
+          <div class="gallery-overlay"><h4>Rénovation cuisine</h4><p>Allauch</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const map = L.map('map').setView([44.0, 5.1], 8);
-            
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; OpenStreetMap'
-            }).addTo(map);
+  <!-- AVIS CLIENTS -->
+  <section class="reviews" id="avis">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Ils nous font confiance</span>
+        <h2 class="section-title">Avis de Nos Clients</h2>
+        <div class="reviews-summary">
+          <div class="reviews-score">
+            <span class="score-number">4.9</span>
+            <div class="score-stars">★★★★★</div>
+            <span class="score-count">Basé sur 127 avis</span>
+          </div>
+          <div class="reviews-platforms">
+            <span class="platform">Google ★★★★★</span>
+            <span class="platform">Pages Jaunes ★★★★★</span>
+            <span class="platform">Houzz ★★★★★</span>
+          </div>
+        </div>
+      </div>
+      <div class="reviews-slider" id="reviewsSlider">
+        <div class="reviews-track" id="reviewsTrack">
 
-            const vaucluseCoords = [
-                [43.95, 5.05], [43.98, 5.15], [44.02, 5.22], [44.08, 5.30],
-                [44.12, 5.38], [44.15, 5.50], [44.12, 5.60], [44.05, 5.68],
-                [43.98, 5.72], [43.90, 5.75], [43.82, 5.70], [43.75, 5.60],
-                [43.72, 5.48], [43.75, 5.35], [43.80, 5.22], [43.85, 5.12],
-                [43.90, 5.05]
-            ];
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-avatar">MB</div>
+              <div class="review-meta">
+                <strong>Marie-Claire B.</strong>
+                <span class="review-location">13ème arrondissement</span>
+                <div class="review-stars">★★★★★</div>
+              </div>
+              <span class="review-source">Google</span>
+            </div>
+            <p class="review-text">"Excellent travail ! ProPeint a complètement rénové notre appartement. Les délais ont été parfaitement respectés et le résultat est magnifique. L'équipe est sérieuse, propre et très professionnelle. Je recommande vivement !"</p>
+            <span class="review-date">Mars 2025</span>
+          </div>
 
-            L.polygon(vaucluseCoords, {
-                color: '#7cb342',
-                fillColor: '#7cb342',
-                fillOpacity: 0.15,
-                weight: 0
-            }).addTo(map);
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-avatar" style="background:#e67e22;">JD</div>
+              <div class="review-meta">
+                <strong>Jean-Pierre D.</strong>
+                <span class="review-location">Aubagne</span>
+                <div class="review-stars">★★★★★</div>
+              </div>
+              <span class="review-source">Google</span>
+            </div>
+            <p class="review-text">"J'ai fait appel à ProPeint pour le ravalement de ma façade. Le devis était clair, le prix compétitif et la qualité du travail au rendez-vous. La façade est comme neuve ! Merci à toute l'équipe."</p>
+            <span class="review-date">Février 2025</span>
+          </div>
 
-            const cities = [
-                { name: 'Avignon', lat: 43.9493, lng: 4.8055 },
-                { name: 'Cavaillon', lat: 43.8342, lng: 5.0382 },
-                { name: 'Orange', lat: 44.1369, lng: 4.8090 },
-                { name: 'Apt', lat: 43.8774, lng: 5.3968 },
-                { name: 'Carpentras', lat: 44.0557, lng: 5.0482 }
-            ];
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-avatar" style="background:#27ae60;">SL</div>
+              <div class="review-meta">
+                <strong>Sophie L.</strong>
+                <span class="review-location">Aix-en-Provence</span>
+                <div class="review-stars">★★★★★</div>
+              </div>
+              <span class="review-source">Pages Jaunes</span>
+            </div>
+            <p class="review-text">"Je cherchais un peintre pour un béton ciré dans ma cuisine. ProPeint m'a conseillée, proposé plusieurs options et le résultat est époustouflant. Vraiment des pros ! Je ferai appel à eux pour d'autres travaux."</p>
+            <span class="review-date">Janvier 2025</span>
+          </div>
 
-            cities.forEach(city => {
-                L.marker([city.lat, city.lng])
-                    .addTo(map)
-                    .bindPopup(city.name);
-            });
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-avatar" style="background:#8e44ad;">AR</div>
+              <div class="review-meta">
+                <strong>Ahmed R.</strong>
+                <span class="review-location">La Valentine, Marseille</span>
+                <div class="review-stars">★★★★★</div>
+              </div>
+              <span class="review-source">Houzz</span>
+            </div>
+            <p class="review-text">"Devis reçu en moins de 24h, intervention rapide et chantier impeccable. Ils ont protégé tous les meubles et laissé les lieux propres en partant. Le travail est vraiment de grande qualité. Je recommande sans hésiter !"</p>
+            <span class="review-date">Décembre 2024</span>
+          </div>
 
-            const customIcon = L.divIcon({
-                className: 'custom-marker',
-                html: '<div class="marker-inner"><i class="fa-solid fa-faucet-drip"></i></div>',
-                iconSize: [40, 40],
-                iconAnchor: [20, 40]
-            });
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-avatar" style="background:#c0392b;">CF</div>
+              <div class="review-meta">
+                <strong>Camille F.</strong>
+                <span class="review-location">Cassis</span>
+                <div class="review-stars">★★★★★</div>
+              </div>
+              <span class="review-source">Google</span>
+            </div>
+            <p class="review-text">"Un grand merci à ProPeint pour la rénovation complète de notre villa. Travail soigné, équipe sympathique et ponctuelle. Le rapport qualité-prix est excellent. Nous sommes ravis du résultat !"</p>
+            <span class="review-date">Novembre 2024</span>
+          </div>
 
-            L.marker([44.0, 5.1], { icon: customIcon })
-                .addTo(map)
-                .bindPopup('<strong>Depann\'Pro</strong><br>Vaucluse')
-                .openPopup();
-        });
-    </script>
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-avatar" style="background:#16a085;">PM</div>
+              <div class="review-meta">
+                <strong>Patrick M.</strong>
+                <span class="review-location">Centre-Ville, Marseille</span>
+                <div class="review-stars">★★★★★</div>
+              </div>
+              <span class="review-source">Google</span>
+            </div>
+            <p class="review-text">"Excellent artisan ! Travail propre et précis. ProPeint a peint les murs de mon restaurant en un week-end sans interrompre mon activité. Professionnalisme au top, je recommande à tous les professionnels !"</p>
+            <span class="review-date">Octobre 2024</span>
+          </div>
+
+        </div>
+      </div>
+      <div class="slider-controls">
+        <button class="slider-btn" id="prevBtn" aria-label="Précédent">&#8592;</button>
+        <div class="slider-dots" id="sliderDots"></div>
+        <button class="slider-btn" id="nextBtn" aria-label="Suivant">&#8594;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- POURQUOI NOUS -->
+  <section class="why-us">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Nos engagements</span>
+        <h2 class="section-title">Pourquoi Choisir ProPeint ?</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">⚡</div>
+          <h3>Réactivité</h3>
+          <p>Devis gratuit envoyé sous 24h. Intervention rapide selon vos disponibilités et l'urgence de vos travaux.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🎯</div>
+          <h3>Précision</h3>
+          <p>Chaque détail compte. Nos peintres travaillent avec rigueur pour des finitions parfaites qui durent dans le temps.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">💰</div>
+          <h3>Prix Transparents</h3>
+          <p>Pas de mauvaise surprise. Nos devis sont détaillés et nos prix sont justes, sans frais cachés.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🌱</div>
+          <h3>Éco-responsable</h3>
+          <p>Nous utilisons des peintures à faibles émissions COV, respectueuses de votre santé et de l'environnement.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🛡️</div>
+          <h3>Garantie 10 ans</h3>
+          <p>Assurance décennale complète sur tous nos travaux. Vous êtes protégés en cas de problème.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">😊</div>
+          <h3>Satisfaction Client</h3>
+          <p>Nous ne terminons pas un chantier tant que vous n'êtes pas pleinement satisfait du résultat.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Parlons de votre projet</span>
+        <h2 class="section-title">Demandez Votre Devis Gratuit</h2>
+        <p class="section-desc">Remplissez le formulaire ci-dessous ou contactez-nous directement. Nous vous répondons sous 24h.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Nos coordonnées</h3>
+          <div class="contact-items">
+            <div class="contact-item">
+              <span class="contact-icon">📞</span>
+              <div><strong>Téléphone</strong><a href="tel:+33491000000">04 91 00 00 00</a></div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">📧</span>
+              <div><strong>Email</strong><a href="mailto:contact@propeint-marseille.fr">contact@propeint-marseille.fr</a></div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">📍</span>
+              <div><strong>Adresse</strong><span>12 Rue de la Peinture, 13001 Marseille</span></div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">🕐</span>
+              <div><strong>Horaires</strong><span>Lun–Ven : 8h–18h | Sam : 9h–12h</span></div>
+            </div>
+          </div>
+          <div class="contact-zone">
+            <h4>Zone d'intervention</h4>
+            <div class="zone-tags">
+              <span class="zone-tag">Marseille</span>
+              <span class="zone-tag">Aix-en-Provence</span>
+              <span class="zone-tag">Aubagne</span>
+              <span class="zone-tag">Cassis</span>
+              <span class="zone-tag">La Ciotat</span>
+              <span class="zone-tag">Martigues</span>
+              <span class="zone-tag">Vitrolles</span>
+              <span class="zone-tag">Salon-de-Provence</span>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nom">Nom complet *</label>
+              <input type="text" id="nom" name="nom" placeholder="Jean Dupont" required />
+            </div>
+            <div class="form-group">
+              <label for="telephone">Téléphone *</label>
+              <input type="tel" id="telephone" name="telephone" placeholder="06 00 00 00 00" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="jean.dupont@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="service">Type de prestation</label>
+            <select id="service" name="service">
+              <option value="">-- Choisir un service --</option>
+              <option>Peinture intérieure</option>
+              <option>Peinture extérieure</option>
+              <option>Ravalement de façade</option>
+              <option>Décoration / Effets spéciaux</option>
+              <option>Locaux professionnels</option>
+              <option>Rénovation complète</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Décrivez votre projet *</label>
+            <textarea id="message" name="message" rows="5" placeholder="Surface approximative, type de logement, état actuel, délai souhaité..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <span>Envoyer ma demande de devis</span>
+            <span class="btn-icon">→</span>
+          </button>
+          <p class="form-note">* Champs obligatoires — Réponse garantie sous 24h ouvrées</p>
+          <div class="form-success" id="formSuccess">
+            <span>✅</span>
+            <p>Votre demande a bien été envoyée ! Nous vous contacterons dans les plus brefs délais.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="nav-logo">
+            <span class="logo-icon">🎨</span>
+            <span class="logo-text">Pro<strong>Peint</strong></span>
+          </span>
+          <p>Artisan peintre professionnel à Marseille depuis 2009. Qualité, sérieux et satisfaction client garantis.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook" class="social-link">f</a>
+            <a href="#" aria-label="Instagram" class="social-link">in</a>
+            <a href="#" aria-label="Google" class="social-link">G</a>
+          </div>
+        </div>
+        <div class="footer-nav">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#realisations">Réalisations</a></li>
+            <li><a href="#avis">Avis clients</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Peinture intérieure</a></li>
+            <li><a href="#services">Peinture extérieure</a></li>
+            <li><a href="#services">Ravalement de façade</a></li>
+            <li><a href="#services">Décoration</a></li>
+            <li><a href="#services">Locaux professionnels</a></li>
+            <li><a href="#services">Rénovation complète</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>📞 <a href="tel:+33491000000">04 91 00 00 00</a></p>
+          <p>📧 <a href="mailto:contact@propeint-marseille.fr">contact@propeint-marseille.fr</a></p>
+          <p>📍 12 Rue de la Peinture<br />13001 Marseille</p>
+          <a href="#contact" class="btn btn-primary btn-sm" style="margin-top:1rem;">Devis gratuit</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 ProPeint — Tous droits réservés | SIRET : 123 456 789 00012</p>
+        <div class="footer-legal">
+          <a href="#">Mentions légales</a>
+          <a href="#">Politique de confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut">↑</button>
+  <a href="tel:+33491000000" class="float-call" aria-label="Appeler ProPeint"><span>📞</span></a>
+
+  <script src="script.js"></script>
 </body>
 </html>
